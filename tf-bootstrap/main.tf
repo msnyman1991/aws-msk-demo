@@ -1,6 +1,6 @@
 module "s3_bucket" {
   source                  = "git::https://github.com/terraform-aws-modules/terraform-aws-s3-bucket.git//?ref=v3.10.1"
-  bucket                  = "${data.aws_caller_identity.current.account_id}-terraform-state"
+  bucket                  = "terraform-state"
   block_public_acls       = "true"
   block_public_policy     = "true"
   ignore_public_acls      = "true"

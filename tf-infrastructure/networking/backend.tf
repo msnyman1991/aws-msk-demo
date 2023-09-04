@@ -7,7 +7,7 @@ terraform {
   }
 
   backend "s3" {
-    bucket         = "${data.aws_caller_identity.current.account_id}-terraform-state"
+    bucket         = "terraform-state"
     region         = "eu-west-1"
     key            = "eks-demo-networking.tfstate"
     dynamodb_table = "terraform-lock-table"
